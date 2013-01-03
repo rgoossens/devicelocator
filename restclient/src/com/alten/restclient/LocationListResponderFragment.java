@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.Toast;
 
+import com.alten.restclient.infrastructure.LocationData;
 import com.alten.restclient.infrastructure.LocationObject;
 import com.alten.restclient.infrastructure.RestConsumer;
 import com.alten.restclient.infrastructure.RestResponderFragment;
@@ -18,7 +19,7 @@ import com.google.gson.reflect.TypeToken;
 
 public class LocationListResponderFragment extends RestResponderFragment {
 
-	private List<LocationObject> locations;
+	private LocationObject locations;
 	
 	@Override
     public void onActivityCreated(Bundle savedInstanceState) {
@@ -44,7 +45,9 @@ public class LocationListResponderFragment extends RestResponderFragment {
 			//Deserialize json
 			Gson gson = new Gson();
 			Type collectionType = new TypeToken<Collection<LocationObject>>(){}.getType();
-			this.locations = gson.fromJson(result, collectionType);
+			this.locations = gson.fromJson(result, LocationObject.class);
+			
+		
 			updateList();
 		}
 			
@@ -64,19 +67,22 @@ public class LocationListResponderFragment extends RestResponderFragment {
 			{
 				//No data loaded yet, so execute REST call
 				 Intent intent = new Intent(activity, RestConsumer.class);
-		         intent.setData(Uri.parse("http://localhost/RESTService/rest/"));
+		         intent.setData(Uri.parse("http://192.168.1.22:8080/RESTService/rest/"));
 		         intent.putExtra(RestConsumer.EXTRA_RESULT_RECEIVER, getResultReceiver());
 		         activity.startService(intent);
 			}
 						
+			if (locations != null && locations.getLocationData() != null)
+			{
 			//Let activity display the data (TODO: maybe this fragment can be extended to even display
 			//stuff)
-			ArrayAdapter<LocationObject> adapter = activity.getLocationAdapter();
+			ArrayAdapter<LocationData> adapter = activity.getLocationAdapter();
 			adapter.clear();
 			
-			for (LocationObject obj : this.locations)
+			for (LocationData obj : this.locations.getLocationData())
 			{
 				adapter.add(obj);
+			}
 			}
 			
 		
