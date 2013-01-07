@@ -14,4 +14,4 @@ Contents:
 
 - RestClient:
   An Android app that consumes the webservice. It is based on the example in here: http://neilgoodman.net/2012/01/01/modern-techniques-for-implementing-rest-clients-on-android-4-0-and-below-part-2/
-  
+  Currently the app requires Android 4.0.3 or higer
