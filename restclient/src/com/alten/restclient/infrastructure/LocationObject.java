@@ -6,17 +6,17 @@ import java.util.List;
 public class LocationObject 
 {
 	
-	private List<LocationData> locationData;
+	private List<LocationData> location;
 	
 	
 	public List<LocationData> getLocationData()
 	{
-		return this.locationData;
+		return this.location;
 	}
 	
 	public void setLocationData(List<LocationData> locationData)
 	{
-		this.locationData = locationData;
+		this.location = locationData;
 		
 	}
 	

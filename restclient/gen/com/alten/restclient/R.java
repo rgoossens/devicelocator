@@ -16,7 +16,7 @@ public final class R {
     public static final class id {
         public static final int fragment_content=0x7f070000;
         public static final int menu_settings=0x7f070007;
-        public static final int txtAltitude=0x7f070005;
+        public static final int txtAltitude =0x7f070005;
         public static final int txtDeviceId=0x7f070001;
         public static final int txtLat=0x7f070003;
         public static final int txtLon=0x7f070004;

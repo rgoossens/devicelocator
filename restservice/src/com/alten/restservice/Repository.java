@@ -17,6 +17,10 @@ public class Repository
 		this.locations.add(new Location(1,"Test",new Date().getTime(),51,6,50));
 		this.locations.add(new Location(2,"Test 2",new Date().getTime(),51,6,50));
 		this.locations.add(new Location(3,"Test 3",new Date().getTime(),51,6,50));
+		this.locations.add(new Location(4,"Test 3",new Date().getTime(),51,6,50));
+		this.locations.add(new Location(5,"Test 3",new Date().getTime(),51,6,50));
+		this.locations.add(new Location(6,"Test 3",new Date().getTime(),51,6,50));
+		this.locations.add(new Location(7,"Test 3",new Date().getTime(),51,6,50));
 	}
 	
 	public void updateLocation(Location location)

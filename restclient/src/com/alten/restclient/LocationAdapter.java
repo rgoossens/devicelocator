@@ -53,7 +53,7 @@ public class LocationAdapter extends ArrayAdapter<LocationData>
         }
        
         LocationData location = this.getItem(position);
-        holder.txtDeviceId.setText(location.getDeviceid());
+        holder.txtDeviceId.setText("" + location.getDeviceid());
         holder.txtTimeStamp.setText("" + location.getTimeStamp());        
         holder.txtLat.setText("" + location.getLat());
         holder.txtLon.setText("" +location.getLon());

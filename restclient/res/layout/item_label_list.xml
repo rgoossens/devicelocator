@@ -1,13 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
     android:orientation="vertical" >
     
-    <TextView android:id="@+id/txtDeviceId"></TextView>    
-	<TextView android:id="@+id/txtTimeStamp"></TextView>
-	<TextView android:id="@+id/txtLat"></TextView>
-	<TextView android:id="@+id/txtLon"></TextView>
-	<TextView android:id="@+id/txtAltitude"></TextView>
-	<TextView android:id="@+id/txtMessage"></TextView>
+    <TextView
+        android:id="@+id/txtDeviceId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+</TextView>    
+
+	<TextView
+	    android:id="@+id/txtTimeStamp"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content" >
+
+</TextView>
+
+	<TextView
+	    android:id="@+id/txtLat"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content" >
+
+</TextView>
+
+	<TextView
+	    android:id="@+id/txtLon"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content" >
+
+</TextView>
+	<TextView android:id="@+id/txtAltitude "
+	    	  android:layout_width="wrap_content"
+	    	  android:layout_height="wrap_content">	    
+	</TextView>
+	<TextView android:id="@+id/txtMessage"
+	       	  android:layout_width="wrap_content"
+	    	  android:layout_height="wrap_content">	    
+	    </TextView>
 </LinearLayout>
